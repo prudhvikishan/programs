@@ -1,0 +1,42 @@
+#include<stdio.h>
+ 
+#define MOD 1000000007
+long long cof[1010][1010];
+long long mprod[1010];
+int main()
+{
+ int i,j,t,n,m,k;
+ cof[0][0] = 1;
+ for (i=1;i<=1000;i++)
+ {
+     for (j=1;j<=i;j++)
+     {
+     cof[i][j] = cof[i-1][j-1] + (j*cof[i-1][j])%MOD;
+     cof[i][j] %= MOD;
+     }
+ }
+ 
+ scanf("%d",&t);
+ while(t--)
+ {
+           scanf("%d %d %d",&n,&m,&k);
+ 
+           mprod[0] = 1;
+           for (i=1;i<=k;i++){
+           mprod[i] = mprod[i-1] * (m--) ;
+           mprod[i] %= MOD;
+           }
+           
+           long long ans = 0;
+           for (i=1;i<=k;i++)
+           {
+           ans += (mprod[i]*cof[n][i])%MOD;
+           ans %= MOD;
+           }
+           
+           printf("%lld\n",ans);
+ }
+           
+ 
+ return 0;
+}
