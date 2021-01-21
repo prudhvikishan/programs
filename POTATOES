@@ -1,0 +1,53 @@
+#include<iostream>
+#include<stdio.h>
+#include <math.h> 
+#define TRUE 1
+#define FALSE 0
+using namespace std;
+int isPrime(int input); 
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+int x,y,z,l,s;
+cin>>x>>y;
+l=x+y;
+s=l+1;
+ 
+        /* if the number is even, make it odd (2 is special case) */
+        if(s%2 == 0 &&s!= 2){ 
+            s+=1;
+        }
+ 
+        /* while its not a prime number, check the next odd number */
+        while(!isPrime(s)){
+            s+=2;
+        }
+ 	z=s-l;
+        printf("%d\n",z);
+    }
+return 0;
+}
+
+int isPrime(int input){
+    int i;
+ 
+    int prime = TRUE;
+ 
+    if(input == 2){
+        return TRUE;
+    }
+ 
+    if(input%2 == 0 || input <= 1){
+        prime = FALSE;
+    } else {
+        for(i=3; i<=sqrt(input); i+=2){
+            if(input%i == 0){
+                prime = FALSE;
+            }
+        }
+    }
+    return prime;
+}
