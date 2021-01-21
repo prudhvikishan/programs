@@ -1,0 +1,12 @@
+t=input()
+a='101'
+b='010'
+while(t) :
+    t=t-1
+    string=raw_input()
+    a1=a in string
+    b1=b in string
+    if (a1 | b1):
+        print 'Good\n'
+    else:
+        print 'Bad\n'
