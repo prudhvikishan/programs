@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+long int N,i,s=0,sum=0;
+cin>>N;
+long int *a=new long int[N];
+for(i=0;i<N;i++)
+{
+cin>>a[i];
+s=s+a[i];
+}
+for(i=1;i<=N;i++)
+{
+sum=sum+i;
+}
+if(s==sum)
+{
+cout<<"YES"<<endl;
+}
+else
+{
+cout<<"NO"<<endl;
+}
+return 0;
+}
