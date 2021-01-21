@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+int h,l,s;
+long long int value=1;
+cin>>h;
+l=h-1;
+while (l!=0)
+  {
+      value*=2;  /* value = value*base; */
+      --l;
+  }
+s=value%1000;  
+cout<<s<<endl;
+}
+return 0;
+}
