@@ -1,0 +1,22 @@
+#include<stdio.h>
+long long d(int);
+int main()
+{
+    int t,n;
+    scanf("%d",&t);
+    while(t--)
+    { 
+        scanf("%d",&n);
+        printf("%lld\n",d(n));
+    }
+    return 0;
+}
+long long d(int n)
+{
+    if(n==1)
+    return 0;
+    else if(n==2)
+    return 1;
+    else 
+    return (n-1)*( d(n-1)+d(n-2));
+}
