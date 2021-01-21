@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+ int a,b,c,t;
+ long int num;
+ scanf("%d",&t);
+ while(t--)
+ {
+ //printf("Enter any number: ");
+ scanf("%ld", &num);
+ if((num==0)||(num==1))
+   printf("is fibo\n");
+ else
+ {
+   a=0;
+   b=1;
+   c=a+b;
+   while(c<num)
+   {
+     a=b;
+     b=c;
+     c=a+b;
+   }
+   if(c==num)
+     printf("is fibo\n");
+   else
+     printf("not fibo\n");
+ }
+ }
+ return 0;
+}
