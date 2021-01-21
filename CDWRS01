@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int t,i;
+scanf("%d",&t);
+for(i=0;i<t;i++)
+{
+int R;
+scanf("%d",&R);
+double a=R*sqrt(2);
+printf("%.6f\n",a);
+}
+return 0;
+}
