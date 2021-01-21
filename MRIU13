@@ -1,0 +1,14 @@
+import java.io.*;
+class Main{
+public static void main(String args[])throws IOException {
+BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+char c;
+     String kal;
+       kal=in.readLine();
+        for(int i=0;i<kal.length();i++){
+           c=(char) (kal.charAt(i)-7);
+           System.out.print(c);
+        }
+        System.out.println();
+ }
+}
