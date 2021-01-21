@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstdio>
+ 
+using namespace std;
+ 
+int main()
+{
+	long long int t,n;
+	cin >> t;
+	while(t--) {
+		cin >> n;
+		if(n>360) {
+			cout << "n n n\n";
+			continue;
+		}
+		if(360%n==0) {
+			cout << "y ";
+		}
+		else {
+			cout << "n ";
+		}
+		cout << "y ";
+		if(n<=26) {
+		  cout <<"y\n";
+		}
+		else cout << "n\n";
+	}
+	return 0;
+}
