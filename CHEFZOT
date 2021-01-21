@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int A=0;
+    long int N=0,count=0,maxCount=0;
+
+    scanf("%ld",&N);
+
+    while(N--)
+    {
+        scanf("%d",&A);
+        count++;
+        if(!A)
+        {
+            count--;
+            if(count > maxCount)
+                maxCount = count;
+            count=0;
+        }
+    }
+    if(count > maxCount)
+        maxCount = count;
+    printf("\n%ld",maxCount);
+
+    return 0;
+}
