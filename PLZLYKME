@@ -1,0 +1,23 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+double l,d,s,c,sum=0;
+cin>>l>>d>>s>>c;
+sum=s*(pow(1+c,d-1));
+if(sum>=l)
+{
+cout<<"ALIVE AND KICKING"<<endl;
+}
+else
+{
+cout<<"DEAD AND ROTTING"<<endl;
+}
+}
+return 0;
+} 
