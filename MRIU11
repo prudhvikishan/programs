@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+int X;
+float Y;
+scanf("%d",&X);
+scanf("%f",&Y);
+if(X<Y&&X%5==0)
+{
+float p=X+0.50;
+float k=Y-(p);
+printf("%.2f",k);
+}
+else
+{
+printf("%.2f",Y);
+}
+return 0;
+}
