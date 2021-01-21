@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+		String str = scanner.next();
+		int digit,count=0;
+		for(int i = 0; i < str.length(); i++)
+		{
+			digit = str.charAt(i) - '0';
+			if(digit == 0 || digit == 6 || digit == 9)
+			{
+				count+=6;
+			}
+			else if(digit == 1)
+			{
+				count+=2;
+			}
+			else if(digit == 2 || digit == 3 || digit == 5)
+			{
+				count+=5;
+			}
+			else if(digit == 4)
+			{
+				count+=4;
+			}
+			else if(digit == 8)
+			{
+				count+=7;
+			}
+			else if(digit == 7)
+			{
+				count+=3;
+			}
+		}
+		System.out.println(count);
+		scanner.close();
+    }
+}
